@@ -5,4 +5,8 @@ TheBand project (one page website)
   - Search icon
 - Slider
 - Content
+  - About
+  - Ticket
+  - Contect
+  Banner
 - Footer
