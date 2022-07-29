@@ -201,3 +201,50 @@ html {
     line-height: 25px;
     margin-top: -2px;
 }
+
+.tour_places {
+    margin: 32px -8px 48px;
+
+}
+.place {
+    float: left;
+    padding: 0px 8px;
+    width: 33.33333%;
+}
+.place_img {
+    width: 100%;
+    display: block;
+}
+.place_img:hover {
+    opacity: 0.6;
+}
+.place_content {
+    padding: 16px;
+    background-color: #fff;
+    min-height: 204px;
+    font-size: 15px;
+}
+.place_heading {
+    font-size: 15px;
+    margin: 15px 0px;
+}
+.place_time {
+    color: #757575;
+    margin: 15px 0px;
+}
+.place_description {
+    margin: 15px 0px;
+    line-height: 1.4;
+}
+.buy_button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+.buy_button:hover {
+    background-color: #ccc;
+    color: #000;
+}
