@@ -340,6 +340,10 @@ position: relative;
     color: #2196F3;
 }
 
+#banner_pic {
+    width: 100%;
+}
+
 @keyframes modalFadeIn {
     from {
         opacity: 0;
