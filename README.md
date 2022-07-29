@@ -10,6 +10,6 @@ TheBand project (one page website)
     - Ticket lists
     - Tour places list
     - Buy tickets menu
-  - Contect
-  Banner
+  - Contact
+  -Banner
 - Footer
