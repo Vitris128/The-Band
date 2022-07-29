@@ -11,5 +11,5 @@ TheBand project (one page website)
     - Tour places list
     - Buy tickets menu
   - Contact
-  -Banner
+  - Banner
 - Footer
