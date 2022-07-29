@@ -243,8 +243,109 @@ html {
     color: #fff;
     text-decoration: none;
     margin-bottom: 16px;
+    border: none;
 }
 .buy_button:hover {
     background-color: #ccc;
     color: #000;
+}
+
+.js_modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.js_modal.open {
+    display: flex;
+}
+.modal_container {
+position: relative;
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    animation: modalFadeIn ease 0.3s;
+}
+.modal_header {
+    height: 129px;
+    font-size: 30px;
+    background-color: #009688;
+    color: #fff;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal_container .modal_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 14px 15px;
+    background-color: #009688;
+    color: #fff;
+    font-weight: 900;
+    cursor: pointer;
+}
+.modal_container .modal_close:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal_body {
+    padding: 16px;
+}
+.modal_label {
+    display: block;
+    font-size: 15px;
+    margin: 15px 0px 5px;
+    font-weight: 500;
+}
+.modal_input {
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: 525;
+    padding: 10.5px;
+}
+#buy_ticket {
+    background-color:#009688;
+    font-size: 15px;
+    color: #fff;
+    width: 100%;
+    padding: 16px 0px;
+    margin: 16px 0px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+#buy_ticket:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal_footer {
+    padding: 16px;
+    text-align: right;
+    
+}
+.modal_footer a {
+    color: #2196F3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
