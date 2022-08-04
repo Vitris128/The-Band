@@ -27,6 +27,7 @@ html {
 .mt-16px {
     margin-top: 16px !important;
 }
+
 .mb-16px {
     margin-bottom: 16px !important;
 }
@@ -421,6 +422,13 @@ position: relative;
     width: 32px;
     display: inline-block;
 }
+.contact_info a{
+    color:#0000ee;
+    opacity: 0.8;
+}
+.contact_info a:hover {
+    opacity: 1;
+}
 
 .contact_content {
     padding: 32px 0px;
@@ -464,58 +472,6 @@ position: relative;
     font-size: 15px;
     color: rgba(0, 0, 0, 0.6);
 
-}
-
-@media only screen and (max-width:37.5em) {
-    /* Navigation bar */
-    #nav {
-        display: block;
-    }
-    #nav > li {
-        display: block;
-    }
-    #nav > li:first-child {
-        display: inline-block;
-    }
-    #nav .subnav {
-        position: initial;
-        background-color: #333;
-    }
-    #nav .subnav li {
-        padding: 15px;
-    }
-    #nav .subnav li a {
-        padding: 0px 16px;
-        color: #fff;
-    }
-    #nav li:hover .subnav {
-        display: flex;
-        flex-direction: column;
-    }
-    #menu_btn {
-        display: block;
-    }
-    #header {
-        overflow: hidden;
-
-    }
-    #header .search_button {
-        display: none;
-    }
-    /* Content */
-    #content .team_member_items {
-        margin-bottom: 16px;
-        width: 100%;
-    }
-    #content .member_avatar {
-        width: 65%;
-    }
-    .column.column_three.mt-16px {
-        width: 100%;
-    }
-    .s-column-one {
-        width: 100%;
-    }
 }
 
 @keyframes modalFadeIn {
