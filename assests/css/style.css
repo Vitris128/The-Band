@@ -27,6 +27,9 @@ html {
 .mt-16px {
     margin-top: 16px !important;
 }
+.mb-16px {
+    margin-bottom: 16px !important;
+}
 .pull_right {
     float: right !important;
 }
@@ -100,7 +103,7 @@ html {
 }
 #nav > li > a {
     color: #fff;
-    padding: 0px 24px;
+    padding: 0px 22px;
     text-decoration: none;
     text-transform: uppercase;
     line-height: 46px;
@@ -144,19 +147,34 @@ html {
 #nav .nav_icon {
     font-size: 14px;
 }
+#menu_btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#header #menu_btn,
 #header .search_icon {
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     line-height: 46px;
 }
+#header #menu_btn,
 #header .search_button {
+    border: none;
     float: right;
     padding: 0px 18px;
     background-color: #000;
 }
+#header #menu_btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
 #header .search_button:hover {
     background-color: red;
     cursor: pointer;
+}
+#menu_btn {
+    display: none;
 }
 
 #slider {
@@ -188,7 +206,8 @@ html {
 
 #content .content_section {
     width: 800px;
-    padding: 64px 0px 112px;
+    max-width: 100%;
+    padding: 64px 16px 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -262,7 +281,7 @@ html {
 }
 
 .tour_places {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 .place_img {
     width: 100%;
@@ -445,6 +464,58 @@ position: relative;
     font-size: 15px;
     color: rgba(0, 0, 0, 0.6);
 
+}
+
+@media only screen and (max-width:37.5em) {
+    /* Navigation bar */
+    #nav {
+        display: block;
+    }
+    #nav > li {
+        display: block;
+    }
+    #nav > li:first-child {
+        display: inline-block;
+    }
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav li {
+        padding: 15px;
+    }
+    #nav .subnav li a {
+        padding: 0px 16px;
+        color: #fff;
+    }
+    #nav li:hover .subnav {
+        display: flex;
+        flex-direction: column;
+    }
+    #menu_btn {
+        display: block;
+    }
+    #header {
+        overflow: hidden;
+
+    }
+    #header .search_button {
+        display: none;
+    }
+    /* Content */
+    #content .team_member_items {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    #content .member_avatar {
+        width: 65%;
+    }
+    .column.column_three.mt-16px {
+        width: 100%;
+    }
+    .s-column-one {
+        width: 100%;
+    }
 }
 
 @keyframes modalFadeIn {

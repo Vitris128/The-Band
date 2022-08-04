@@ -14,11 +14,11 @@
         <!-- header -->
         <div id="header">
                 <ul id="nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#band">Band</a></li>
-                    <li><a href="#tour">Tour</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li>
+                    <li class="navbar_items"><a href="#">Home</a></li>
+                    <li class="navbar_items"><a href="#band">Band</a></li>
+                    <li class="navbar_items"><a href="#tour">Tour</a></li>
+                    <li class="navbar_items"><a href="#contact">Contact</a></li>
+                    <li class="navbar_items">
                         <a href="#">
                             More
                             <i class="nav_icon ti-angle-down"></i>
@@ -30,6 +30,9 @@
                         </ul>
                     </li>
                 </ul>
+                <button id="menu_btn">
+                    <i class="ti-menu"></i>
+                </button>
                 <div class="search_button">
                     <i class="search_icon ti-search"></i>
                 </div>
@@ -55,15 +58,15 @@
 
                 </p>
                 <div class="row team_member">
-                    <div class="column column_three text_center">
+                    <div class="column column_three text_center team_member_items">
                         <p class="member_name">Name</p>
                         <img src="./assests/img/content/team_member/member1.jpg" alt="Name" class="member_avatar">
                     </div>
-                    <div class="column column_three text_center">
+                    <div class="column column_three text_center team_member_items">
                         <p class="member_name">Name</p>
                         <img src="./assests/img/content/team_member/member1.jpg" alt="Name" class="member_avatar">
                     </div>
-                    <div class="column column_three text_center">
+                    <div class="column column_three text_center team_member_items">
                         <p class="member_name">Name</p>
                         <img src="./assests/img/content/team_member/member1.jpg" alt="Name" class="member_avatar">
                     </div>
@@ -82,7 +85,7 @@
                         <li>November <span class="quantity">3</span></li>
                     </ul>
                     <div class="row tour_places">
-                        <div class="column column_three">
+                        <div class="column column_three mt-16px">
                             <img src="./assests/img/content/ticket_tour_places/newyork.jpg" alt="New York" class="place_img">
                             <div class="place_content">
                                 <h3 class="place_heading">New York</h3>
@@ -91,7 +94,7 @@
                                 <button class="btn js_buy_ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="column column_three">
+                        <div class="column column_three mt-16px">
                             <img src="./assests/img/content/ticket_tour_places/paris.jpg" alt="New York" class="place_img">
                             <div class="place_content">
                                 <h3 class="place_heading">Paris</h3>
@@ -100,7 +103,7 @@
                                 <button class="btn js_buy_ticket">Buy Tickets</button>
                             </div>
                         </div>
-                            <div class="column column_three">
+                            <div class="column column_three mt-16px">
                             <img src="./assests/img/content/ticket_tour_places/sanfran.jpg" alt="New York" class="place_img">
                             <div class="place_content">
                                 <h3 class="place_heading">San Francisco</h3>
@@ -117,23 +120,23 @@
             <!-- Tour section -->
             
             <!-- Contact section -->
-            <div id="contact" class="content_section">
+            <div class="content_section">
                 <h2 class="section_heading">CONTACT</h2>
                 <p class="section_sub_heading">Fan? Drop a note!</p>
                 
                 <div class="row contact_content">
-                    <div class="column column_two contact_info">
+                    <div class="column column_two mb-16px s-column-one contact_info">
                         <p><i class="ti-location-pin"></i>Chicago, US</p>
                         <p><i class="ti-mobile"></i>Phone: +00 151515</p>
                         <p><i class="ti-email"></i>Email: mail@mail.com</p>
                     </div>
-                    <div class="column column_two contact_form">
+                    <div class="column column_two s-column-one contact_form">
                         <form action="">
                             <div class="row mt-8px">
-                                <div class="column column_two">
+                                <div class="column s-column-one column_two">
                                     <input type="text" name="" id="" placeholder="Name" required class="form_control">
                                 </div>
-                                <div class="column column_two">
+                                <div class="column s-column-one column_two">
                                     <input type="email" name="" id="" placeholder="Email" required class="form_control">
                                 </div>
                             </div>
@@ -224,6 +227,35 @@
         modalContainer.addEventListener('click',function(event) {
             event.stopPropagation()
         })
+    </script>
+    <script>
+        var header = document.getElementById('header');
+        var menubtn = document.getElementById('menu_btn');
+        var headerHeight = header.clientHeight;
+
+        // Open/Close menu
+        menubtn.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+        }
+        //Auto close menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i=0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function() {
+                var isParantMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParantMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
     </script>
 </body>
 </html>
