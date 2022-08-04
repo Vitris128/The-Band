@@ -42,9 +42,26 @@
 
         <!-- Slider -->
         <div id="slider">
-            <div class="text_content">
-                <h2 class="text_heading">Los Angeles</h2>
-                <p class="text_decripsion">We had the best time playing at Venice Beach!</p>
+            <div class="mySlides">
+                <img class="slider_img" src="./assests/img/slider/slider1.jpg" alt="">
+                <div class="text_content">
+                    <h2 class="text_heading">Chicago</h2>
+                    <p class="text_decripsion">Thank you, Chicago - A night we won't forget.</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img class="slider_img" src="./assests/img/slider/slider2.jpg" alt="">
+                <div class="text_content">
+                    <h2 class="text_heading">New York</h2>
+                    <p class="text_decripsion">The atmosphere in New York is lorem ipsum.</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img class="slider_img" src="./assests/img/slider/slider3.jpg" alt="">
+                <div class="text_content">
+                    <h2 class="text_heading">Los Angeles</h2>
+                    <p class="text_decripsion">We had the best time playing at Venice Beach!</p>
+                </div>
             </div>
         </div>
         <!-- Slider -->
@@ -207,6 +224,28 @@
             </footer>
         </div>
     </div>
+    <!-- My slides -->
+    <script>
+        var myIndex = 0;
+        slideChange();
+
+        function slideChange() {
+            var i;
+            var x = document.getElementsByClassName('mySlides');
+            for( i=0; i<x.length; i++)
+            {
+                x[i].style.display = 'none';
+            }
+            myIndex++;
+            if(myIndex > x.length) {
+                myIndex = 1;
+            }
+            x[myIndex-1].style.display = 'block';
+            setTimeout(slideChange,4000);
+        }
+    </script>
+
+    <!-- Buy modal -->
     <script>
         const buyBtns = document.querySelectorAll('.js_buy_ticket')
         const modal =document.querySelector('.js_modal')
@@ -229,6 +268,8 @@
             event.stopPropagation()
         })
     </script>
+
+    <!-- Menu button on Mobile/Tablet -->
     <script>
         var header = document.getElementById('header');
         var menubtn = document.getElementById('menu_btn');
