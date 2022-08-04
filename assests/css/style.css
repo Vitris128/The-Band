@@ -78,6 +78,7 @@ html {
     margin-bottom: 16px;
     cursor: pointer;
     border: none;
+    appearance: none;
 }
 .btn:hover {
     background-color: #ccc;
